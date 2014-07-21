@@ -229,7 +229,21 @@ ldap:
 
 # LDAP Group Mapping
 
+As of now, the primary purpose of the UAA is to issue [Oauth 2](http://tools.ietf.org/html/rfc6749) 
+tokens to the client on behalf of the user. 
+
+The UAA integrates with LDAP groups during the user authentication process. Each time a user is authenticated,
+group memberships, if configured, are retrieved and refreshed.
+
+These groups are then mapped to UAA scopes.
+
 ## Scopes
+
+A token contains a list of scopes and authorities. The scopes in the token represent the permissions of the user
+while the authorities represent the permissions of the client itself. Thus, a resource server receiving a request
+containing a token can decide to authorize the client on behalf of the user, or just the client itself.
+
+
 
 ## Ldap Groups as Scopes
 
