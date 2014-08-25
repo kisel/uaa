@@ -60,7 +60,7 @@ public class AuthzAuthenticationManagerTests {
     // "password"
     private static final String PASSWORD = "$2a$10$HoWPAUn9zqmmb0b.2TBZWe6cjQcxyo8TDwTX.5G46PBL347N3/0zO";
     private UaaUser user = null;
-    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(6);
+    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(8);
     private UaaUser loginServerUser = null;
     private String loginServerUserName="loginServerUser".toLowerCase();
 

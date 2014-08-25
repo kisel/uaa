@@ -86,7 +86,7 @@ public class JdbcScimUserProvisioning extends AbstractQueryable<ScimUser> implem
 
     private PasswordValidator passwordValidator = new DefaultPasswordValidator();
 
-    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(6);
+    private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(8);
 
     private boolean deactivateOnDelete = true;
 

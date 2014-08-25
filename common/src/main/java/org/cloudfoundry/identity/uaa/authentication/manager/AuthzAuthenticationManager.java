@@ -67,7 +67,7 @@ public class AuthzAuthenticationManager implements AuthenticationManager, Applic
     private final UaaUser dummyUser;
 
     public AuthzAuthenticationManager(UaaUserDatabase cfusers) {
-        this(cfusers, new BCryptPasswordEncoder(6));
+        this(cfusers, new BCryptPasswordEncoder(8));
     }
 
     public AuthzAuthenticationManager(UaaUserDatabase userDatabase, PasswordEncoder encoder) {
