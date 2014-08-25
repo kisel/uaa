@@ -136,7 +136,9 @@
         </constructor-arg>
     </bean>
 
-    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <constructor-arg value="6" type="int" />
+    </bean>
 
     <oauth:web-expression-handler id="oauthWebExpressionHandler" />
 
